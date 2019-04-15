@@ -21,7 +21,7 @@ Note: Parts can be found [Here](https://www.amazon.com/Freenove-Processing-Oscil
 
 ## Usage?
 Yes. Go ahead. To say no implies this has worth, which honestly, this has negative worth.
-Note: Please read the lisence! It's short, and not proprietary!
 
+Note: Please read the lisence! It's short, and not proprietary!
 
 Fun fact: The name, "RetardedWalle2" comes from the fact that the sensor makes it look like a wall-e. It's the 2nd "edition" of my ultasonic sensor based goodness. Also, it's "Retarded" because... well, let me remind you, I built the body of this in a play-doh canister. Another fun fact: I and this robot have something in common, and I'm the eldest sibling in my house.
