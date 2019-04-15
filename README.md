@@ -1,13 +1,13 @@
 # RetardedWalle2
 A "robot" (insult to robotics) to make an image based on distance with an ultrasonic sensor - like sonar.
 
-##Why?
+## Why?
 I did this to:
-Learn more in depth programming skills
-Get more into electrical engineering
-Make use of a sensor kit thing for arduino
-Make some sort of "product" that doesn't suck shit
-Something to do
+* Learn more in depth programming skills
+* Get more into electrical engineering
+* Make use of a sensor kit thing for arduino
+* Make some sort of "product" that doesn't suck shit
+* Something to do
 
 ## How?
 This is operated with:
