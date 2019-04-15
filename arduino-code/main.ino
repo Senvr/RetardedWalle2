@@ -45,8 +45,8 @@ float getdist() { // Float 'cause of fancy schmancy decimals 'n shit
                                    //^^^ This timeout, 10 miliseconds, also determines the max distance. Keep this in mind if you decide to tamper with this in "tightening"
   distance = duration * 0.034 / 2; // Do some physics math to find the distance based on the speed of sound (we want distance after all)
   
-  if ((millis() - starttime1) < 10) { // Make sure lag doesn't end up as a value higher than the delay. Also - IF YOU ARE TIGHTENING THE DELAYS, MAKE SURE YOU CHANGE THIS!!! Not killer, but advisable still.
-    lag = (millis() - starttime1); // See how many miliseconds this entire thing took. Will n
+  if ((micros() - starttime1) < 10000) { // Make sure lag doesn't end up as a value higher than the delay. Also - IF YOU ARE TIGHTENING THE DELAYS, MAKE SURE YOU CHANGE THIS!!! Not killer, but advisable still.
+    lag = (micros() - starttime1); // See how many miliseconds this entire thing took. Will n
   } else {
     lag = 0; // Otherwise set to zero so it doesn't do any real change
   }
@@ -72,21 +72,21 @@ void incServo() {
 //Now: To execute all of this.
 void loop() {
   Serial.println("=============================="); // DEBUGGING
-  demoDuration=millis(); // same lag thing as before but this is actually important (i guess)
+  demoDuration=micros(); // same lag thing as before but this is actually important (i guess)
   distance = getdist(); // Runs the sensor, puts the output as the distance. Probably redundant. Don't care.
   Serial.print("Distance: "); // NOT DEBUGGING!!! This sends the "header" over first. Required to differentiate stuff 
   Serial.println(distance); // The meaty goodness: the entire fucking point of this script all lead up to basically this line.
 
-  delay(10 - lag); // Account for lag, lag being from the getdist thing. 
+  delayMicroseconds(10000 - lag); // Account for lag, lag being from the getdist thing. 
   Serial.print("Lag:"); // Same header thing
   Serial.println(lag); // beep boop same fuckn shit
   
   incServo(); // Move the servo forward after data has been read.
-  if((millis()-demoDuration) < 100){ // Same lag-check as before and all that.
-  delay(100-(millis()-demoDuration)); // This equalizes each loop time (Relatively speaking. It's off by 1-2 miliseconds as the CPU isnt exactly a 4 gigahertz intel I7 (my hypothesis atleast). A lot better than the 2-9 miliseconds. Increaces ACCURACY
+  if((micros()-demoDuration) < 100000){ // Same lag-check as before and all that.
+  delayMicroseconds(100000-(micros()-demoDuration)); // This equalizes each loop time (Relatively speaking. It's off by 1-2 miliseconds as the CPU isnt exactly a 4 gigahertz intel I7 (my hypothesis atleast). A lot better than the 2-9 miliseconds. Increaces ACCURACY
   }
   Serial.print("Cycle Time:"); // Headerass
-  Serial.println(millis()-demoDuration); // aaa
+  Serial.println(micros()-demoDuration); // aaa
   demoDuration=0; // reset duration
   Serial.println("=============================="); //Debug Dickshit
 }
