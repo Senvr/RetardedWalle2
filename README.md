@@ -11,11 +11,11 @@ I did this to:
 
 ## How?
 This is operated with:
-1 servo (Tower Pro SG90 Analog Servo)
-Ultrasonic Sensor (HC-SR04)
-Play-Doh cup
-Blood of the damned
-Coffee and 3 AM powerblasts
+* 1 servo (Tower Pro SG90 Analog Servo)
+* 1 Ultrasonic Sensor (HC-SR04)
+* 1 Play-Doh cup
+* 5 shitloads of wires
+* 400 metric fuckloads of coffee and 3 AM powerblasts
 
 Note: Parts can be found [Here](https://www.amazon.com/Freenove-Processing-Oscilloscope-Voltmeter-Components/dp/B06X3V84PV)
 
